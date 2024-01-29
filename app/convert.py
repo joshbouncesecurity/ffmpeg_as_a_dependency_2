@@ -2,8 +2,8 @@ import imageio_ffmpeg
 
 # From https://github.com/imageio/imageio-ffmpeg?tab=readme-ov-file#example-usage
 
-path_in = 'video.mp4'
-path_out = 'video_out.mp4'
+path_in = '/code/app/vid_in/video.mp4'
+path_out = '/code/app/vid_out/video_out.mp4'
 
 # Read a video file
 reader = imageio_ffmpeg.read_frames(path_in)
@@ -16,3 +16,5 @@ for frame in reader:
     writer.send(frame)
 writer.close()  # don't forget this
 reader.close()
+
+print('success!!!')
