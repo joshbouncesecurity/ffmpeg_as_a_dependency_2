@@ -2,6 +2,10 @@ import imageio_ffmpeg
 
 # From https://github.com/imageio/imageio-ffmpeg?tab=readme-ov-file#example-usage
 
+print('-------------------------------------------------------')
+print('STARTING convert.py')
+print(f'The version of ffmpeg being used is ${imageio_ffmpeg.get_ffmpeg_version()}')
+
 path_in = '/code/app/vid_in/video.mp4'
 path_out = '/code/app/vid_out/video_out.mp4'
 
@@ -17,4 +21,5 @@ for frame in reader:
 writer.close()  # don't forget this
 reader.close()
 
-print('success!!!')
+print('Conversion succeeeded!!!')
+print('-------------------------------------------------------')
